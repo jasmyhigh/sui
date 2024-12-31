@@ -18,7 +18,7 @@ In this example, we will update one of our core types (SuiError), and then updat
 huitseeker@Garillots-MBP.localdomain➜~/tmp/sui(main)» git checkout main                                                                                                                                                                                                                                                                                                                                                                                                               [7:40:40]
 Already on 'main'
 Your branch is up to date with 'origin/main'.
-huitseeker@Garillots-MBP.localdomain➜~/tmp/sui(main)» ruplacer --subvert 'CertificateAuthorityReuse' 'CertificateAuthorityDuplicate' --go                                                                                                                                                                                                                                                                                                                                             [8:42:33]
+huitseeker@Garillots-MBP.localdomain➜~/tmp/sui(main)» replacer --subvert 'CertificateAuthorityReuse' 'CertificateAuthorityDuplicate' --go                                                                                                                                                                                                                                                                                                                                             [8:42:33]
 ./sui_types/src/error.rs:103 - CertificateAuthorityReuse,
 ./sui_types/src/error.rs:103 + CertificateAuthorityDuplicate,
 
