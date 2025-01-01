@@ -34,7 +34,7 @@ It has the following main components:
     - Most facilities from `tokio::runtime` and `tokio::time` are delegated back to the simulator runtime.
     - Custom implementations of the `tokio::net::Tcp*` structs are provided to interface with the network simulator.
     - Most other pieces of tokio (e.g. `sync`) did not need to be re-implemented because they don't interface with the runtime or the network. These are simply re-exported as is.
-    - A minimal [fork of tokio](https://github.com/mystenmark/tokio-madsim-fork) is required in order to expose certain internals to the simulator. This fork has very few modifications, which were written to be easily rebaseable when new tokio releases come out.
+    - A minimal [fork of tokio](https://github.com/mystenmark/tokio-madsim-fork) is required in order to expose certain internals to the simulator. This fork has very few modifications, which were written to be easily rebaseable when new tokio releases come out.  
 
 1. A library of interceptor functions which intercept various posix API calls in order to enforce determinism throughout the test. These include:
     - `getrandom()`, `getentropy()` - intercepted and delegated to the simulator PRNG.
@@ -249,7 +249,7 @@ And see how often if passes/fails.
 Note which seeds cause the test to pass, and which cause it to fail - it may be helpful to compare log output from passing and failing runs to see how they differ, and between pairs of passing or failing runs to see how they are alike.
 
 **Do not forget that the test may not be to blame!**
-Your code may be just be buggy!
+Your code may just be buggy!
 In other words, flaky code may also cause flaky tests.
 
 It's impossible to list every possible cause of flakiness in a document, but the best place to start looking is at anything timing related, especially hard-coded delays in the test.
