@@ -161,7 +161,7 @@ or rotating an existing validaotr's <code>operation_cap_id</code>.
     ctx: &<b>mut</b> TxContext,
 ): ID {
     // This function needs <b>to</b> be called only by the <a href="validator.md#0x3_validator">validator</a> itself, <b>except</b>
-    // 1. in <a href="genesis.md#0x3_genesis">genesis</a> <b>where</b> all valdiators are created by @0x0
+    // 1. in <a href="genesis.md#0x3_genesis">genesis</a> <b>where</b> all validators are created by @0x0
     // 2. in tests <b>where</b> @0x0 could be used <b>to</b> simplify the setup
     <b>let</b> sender_address = ctx.sender();
     <b>assert</b>!(sender_address == @0x0 || sender_address == validator_address, 0);
